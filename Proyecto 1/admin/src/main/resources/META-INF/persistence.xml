@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+    <!-- Define Persistence Unit -->
+    <persistence-unit name="Proyecto_PU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>logica.Bitacora</class>
+        <class>logica.Canton</class>
+        <class>logica.Categoria</class>
+        <class>logica.Distrito</class>
+        <class>logica.Factura</class>
+        <class>logica.MetodoPago</class>
+        <class>logica.Pais</class>
+        <class>logica.Persona</class>
+        <class>logica.PersonaXTelefono</class>
+        <class>logica.Producto</class>
+        <class>logica.ProductoXFactura</class>
+        <class>logica.Provincia</class>
+        <class>logica.Telefono</class>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <properties>
+            <!-- Opción A: usar TNS alias definido en tnsnames.ora -->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:oracle:thin:@siuadb2_high?TNS_ADMIN=C:/Users/aliss/OneDrive/Escritorio/proyecto-bases/src/main/resources/Wallet_siuadb2"/>
+            <property name="jakarta.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+            <property name="jakarta.persistence.jdbc.user" value="alissonrrr15200"/>
+            <property name="jakarta.persistence.jdbc.password" value="Sam?Qv16.ExtrawZ"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
+            <property name="eclipselink.cache.shared.default" value="false"/>
+            <property name="eclipselink.logging.level" value="FINE"/>
+        </properties>
+    </persistence-unit>
+</persistence>
